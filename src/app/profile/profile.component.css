@@ -1,19 +1,4 @@
-/* #nav_items
-    {
-        display: flex;
-        justify-content:flex-start;
-        font-weight: bold;
-    }
-    .top-left-btn {
-    position: absolute;
-    top: 10px; 
-    left: 10px; 
-  }
-  .top-right-btn {
-    position: absolute;
-    top: 10px; /* Adjust the top distance as needed */
-    /* right: 10px; /* Adjust the right distance as needed 
-  } */
+
   .centered-text {
     text-align: 500px;
   } 
