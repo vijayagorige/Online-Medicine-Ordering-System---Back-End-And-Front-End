@@ -1,0 +1,63 @@
+
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+        <hr />
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()" #userForm="ngForm" novalidate>
+            <div class="form-group">
+              <label for="userId">User ID</label>
+              <input type="text" class="form-control" id="userId" [(ngModel)]="uL.userId" name="userId" required>
+              <div *ngIf="userForm.controls['userId'].hasError('required') && userForm.controls['userId'].touched"
+                class="text-danger">
+                User ID is required.
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" [(ngModel)]="uL.password" name="password"
+                required>
+              <div *ngIf="userForm.controls['password'].hasError('required') && userForm.controls['password'].touched"
+                class="text-danger">
+                Password is required.
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" [(ngModel)]="uL.name" name="name" required>
+              <div *ngIf="userForm.controls['name'].hasError('required') && userForm.controls['name'].touched"
+                class="text-danger">
+                Name is required.
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" id="address" [(ngModel)]="uL.address" name="address" required>
+              <div *ngIf="userForm.controls['address'].hasError('required') && userForm.controls['address'].touched"
+                class="text-danger">
+                Address is required.
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="contactNo">Contact No</label>
+              <input type="number" class="form-control" id="contactNo" [(ngModel)]="uL.contactNo" name="contactNo"
+                required>
+              <div *ngIf="userForm.controls['contactNo'].hasError('required') && userForm.controls['contactNo'].touched"
+                class="text-danger">
+                Contact No is required.
+              </div>
+            </div>
+  
+            <br />
+            <button class="btn btn-success" type="submit" [disabled]="userForm.invalid">Submit</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

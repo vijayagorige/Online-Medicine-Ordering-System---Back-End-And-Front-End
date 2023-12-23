@@ -1,0 +1,28 @@
+<div class = "row">
+    <h2> Delivery Boy</h2>
+</div>
+
+<table class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th> loginid</th>
+            <th> password </th>
+            <th> name</th>
+            <th> contactno</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let uL of uLS" >
+            <td> {{ uL.loginid }} </td>
+            <td> {{ uL.password}} </td>
+            <td> {{ uL.name}} </td>
+            <td> {{ uL.contactno}} </td>
+            <td>
+                <button (click) = "update(uL.loginid)" class = "btn btn-primary"> Update</button>
+                <button (click) = "delete(uL.loginid)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "details(uL.loginid)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

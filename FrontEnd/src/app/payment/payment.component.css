@@ -1,0 +1,11 @@
+.top-right-btn {
+    display: flex;
+    font-family: 'Arial', 'sans-serif'; 
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30vh; /* Adjust as needed */
+  }

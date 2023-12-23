@@ -1,0 +1,36 @@
+
+
+ <div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+      <div class="row">
+        <hr />
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()" #userForm="ngForm" novalidate>
+            <div class="form-group">
+              <label for="id">ID</label>
+              <input type="text" class="form-control" id="id" [(ngModel)]="uL.id" name="id" required>
+              <div *ngIf="userForm.controls['id'].hasError('required') && userForm.controls['id'].touched"
+                class="text-danger">
+                ID is required.
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" [(ngModel)]="uL.password" name="password"
+                required>
+              <div *ngIf="userForm.controls['password'].hasError('required') && userForm.controls['password'].touched"
+                class="text-danger">
+                Password is required.
+              </div>
+            </div>
+  
+            <br />
+            <button class="btn btn-success" type="submit" [disabled]="userForm.invalid">Submit</button>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

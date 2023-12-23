@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark" id="nav_items">
+    <ul class = "navbar-nav">
+<li class = "nav-item">
+    <a routerLink="deliverylist" routerLinkActive="active" class="nav-link" >Delivery Boy</a>
+  </li>
+  <li class = "nav-item">
+    <a routerLink="adddelivery" routerLinkActive="active" class="nav-link" >Add Delivery Boy</a>
+  </li>
+    </ul>
+</nav>
+<div class = "row">
+   
+</div>
+
+<table class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th> loginid</th>
+            <th> name</th>
+            <th> contactno</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let uL of uLS" >
+            <td> {{ uL.loginid }} </td>
+            <td> {{ uL.name}} </td>
+            <td> {{ uL.contactno}} </td>
+            <td>
+                <button (click) = "update(uL.loginid)" class = "btn btn-primary"> Update</button>
+                <button (click) = "delete(uL.loginid)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "details(uL.loginid)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
