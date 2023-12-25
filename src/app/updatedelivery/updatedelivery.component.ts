@@ -29,6 +29,6 @@ export class UpdatedeliveryComponent implements OnInit{
     error => console.log(error));
   }
   goToList(){
-    this.router.navigate(['/deliverylist']);
+    this.router.navigate(['/delivery/deliverylist']);
   }
 }
